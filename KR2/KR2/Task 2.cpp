@@ -8,7 +8,7 @@ double** result(double** m1, double** m2, int n, int m);
 
 
 
-int main_2()
+int main()
 {
 	int n,m;
 
@@ -29,9 +29,27 @@ int main_2()
 	cout << "resultmatrix " << endl;
 	print(resultmatrix, n, m);
 	
-
+	for(int i = 0; i < n; i++)
+	{
+		delete [] matrix1[i];
+	}
+	delete [] matrix1;
+	
+	for(int i = 0; i < n; i++)
+	{
+		delete [] matrix2[i];
+	}
+	delete [] matrix2;
+	
+	for(int i = 0; i < n; i++)
+	{
+		delete [] resultmatrix[i];
+	}
+	delete [] resultmatrix;
+	
 	return 0;
 }
+
 double** input(int n, int m)
 {
 	double** matrix = new double* [n];
