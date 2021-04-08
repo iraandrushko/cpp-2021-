@@ -24,6 +24,8 @@ int main()
         cout << arr[i] << "\t";
     }
 
+    delete [] arr; 
+    
     return 0;
 }
 
